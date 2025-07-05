@@ -8,10 +8,14 @@
 import SwiftUI
 
 @main
-struct Favorites_CompletedApp: App {
+struct FavoritesApp: App {
+    
+    @StateObject private var favoritesViewModel = FavoritesViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(favoritesViewModel)
         }
     }
 }
